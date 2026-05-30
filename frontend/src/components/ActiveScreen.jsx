@@ -180,7 +180,7 @@ function CounterCard({ label, count, target, accentClass, borderClass }) {
         <div className="h-1 rounded-full bg-eco-800 overflow-hidden">
           <div
             className="h-full rounded-full transition-all duration-500"
-            style={{ width: `${progress * 100}%`, background: 'linear-gradient(90deg, #22c55e, #4ade80)' }}
+            style={{ width: `${progress * 100}%`, background: 'linear-gradient(90deg, #3b82f6, #60a5fa)' }}
           />
         </div>
       </div>
