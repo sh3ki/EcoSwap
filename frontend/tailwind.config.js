@@ -5,17 +5,17 @@ export default {
     extend: {
       colors: {
         eco: {
-          950: '#020804',
-          900: '#04110a',
-          800: '#071a0c',
-          750: '#0a2210',
-          700: '#0f2d14',
-          600: '#164020',
-          500: '#22c55e',
-          400: '#4ade80',
-          300: '#86efac',
-          200: '#bbf7d0',
-          100: '#dcfce7',
+          950: '#020408',
+          900: '#040c18',
+          800: '#071525',
+          750: '#0a1e38',
+          700: '#0f274d',
+          600: '#1a3a6e',
+          500: '#3b82f6',
+          400: '#60a5fa',
+          300: '#93c5fd',
+          200: '#bfdbfe',
+          100: '#dbeafe',
         },
         danger: '#ef4444',
       },
@@ -25,10 +25,10 @@ export default {
         mono:  ['"JetBrains Mono"', 'Consolas', 'monospace'],
       },
       boxShadow: {
-        'eco-sm':  '0 0 12px rgba(34,197,94,0.15)',
-        'eco-md':  '0 0 24px rgba(34,197,94,0.20)',
-        'eco-lg':  '0 0 48px rgba(34,197,94,0.25)',
-        'eco-glow':'0 0 80px rgba(34,197,94,0.35)',
+        'eco-sm':  '0 0 12px rgba(59,130,246,0.15)',
+        'eco-md':  '0 0 24px rgba(59,130,246,0.20)',
+        'eco-lg':  '0 0 48px rgba(59,130,246,0.25)',
+        'eco-glow':'0 0 80px rgba(59,130,246,0.35)',
       },
       animation: {
         'pulse-slow':    'pulse 3s cubic-bezier(0.4,0,0.6,1) infinite',
@@ -53,7 +53,7 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         countBump: {
-          '0%':   { transform: 'scale(1.35)', color: '#4ade80' },
+          '0%':   { transform: 'scale(1.35)', color: '#60a5fa' },
           '100%': { transform: 'scale(1)',    color: 'inherit' },
         },
         flashResult: {
