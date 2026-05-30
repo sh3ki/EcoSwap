@@ -16,29 +16,23 @@ export default function IdleScreen() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2
                       w-[600px] h-[600px] rounded-full pointer-events-none"
            style={{
-             background: 'radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%)'
+             background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)'
            }} />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-10 px-8 fade-in">
 
-        {/* Logo mark */}
-        <div className="flex items-center justify-center w-20 h-20 rounded-2xl
+        {/* Logo mark — ecoswap circular-arrow icon */}
+        <div className="flex items-center justify-center w-24 h-24 rounded-2xl
                         bg-eco-800 border border-eco-600 shadow-eco-md">
-          <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
-            <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z"
-                  stroke="#22c55e" strokeWidth="1.5" fill="none"/>
-            <path d="M15 20 Q15 14 20 14 Q25 14 25 20 Q25 26 20 26 Q15 26 15 20"
-                  stroke="#4ade80" strokeWidth="1.5" fill="none"/>
-            <circle cx="20" cy="20" r="2" fill="#22c55e"/>
-          </svg>
+          <EcoSwapIcon className="w-14 h-14" />
         </div>
 
-        {/* Title */}
+        {/* Title — two-tone brand like the logo image */}
         <div className="text-center">
-          <h1 className="font-brand font-bold text-7xl tracking-tight eco-glow-text
-                         text-eco-400 leading-none mb-3">
-            eco-swap
+          <h1 className="font-brand font-bold text-7xl tracking-tight leading-none mb-3">
+            <span className="text-eco-300">eco</span>
+            <span className="text-eco-400 eco-glow-text">swap</span>
           </h1>
           <p className="text-eco-600 text-lg font-light tracking-[0.25em] uppercase">
             turning your trash into cash
@@ -90,6 +84,44 @@ export default function IdleScreen() {
       <div className="absolute bottom-0 left-0 right-0 h-px
                       bg-gradient-to-r from-transparent via-eco-600 to-transparent opacity-40" />
     </div>
+  )
+}
+
+// ── EcoSwap Icon SVG ─────────────────────────────────────────────────────────
+function EcoSwapIcon({ className }) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className={className}>
+      <defs>
+        <linearGradient id="iconGradA" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%"  stopColor="#93c5fd" />
+          <stop offset="100%" stopColor="#3b82f6" />
+        </linearGradient>
+        <linearGradient id="iconGradB" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%"  stopColor="#3b82f6" />
+          <stop offset="100%" stopColor="#1d4ed8" />
+        </linearGradient>
+      </defs>
+
+      {/* Top-right arc */}
+      <path d="M24 8 A16 16 0 0 1 40 24" stroke="url(#iconGradA)"
+            strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+      {/* Arrow tip top-right */}
+      <polyline points="37,17 40,24 33,24" stroke="url(#iconGradA)"
+                strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+
+      {/* Bottom-left arc */}
+      <path d="M24 40 A16 16 0 0 1 8 24" stroke="url(#iconGradB)"
+            strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+      {/* Arrow tip bottom-left */}
+      <polyline points="11,31 8,24 15,24" stroke="url(#iconGradB)"
+                strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+
+      {/* Leaf accent — top */}
+      <path d="M21 7 Q24 3 27 7 Q24 10 21 7Z" fill="#93c5fd" opacity="0.85"/>
+      {/* Leaf stem */}
+      <line x1="24" y1="10" x2="24" y2="7" stroke="#93c5fd" strokeWidth="1.5"
+            strokeLinecap="round" opacity="0.7"/>
+    </svg>
   )
 }
 
