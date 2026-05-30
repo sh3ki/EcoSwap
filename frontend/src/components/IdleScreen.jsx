@@ -92,35 +92,28 @@ function EcoSwapIcon({ className }) {
   return (
     <svg viewBox="0 0 48 48" fill="none" className={className}>
       <defs>
-        <linearGradient id="iconGradA" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="iconG" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%"  stopColor="#93c5fd" />
-          <stop offset="100%" stopColor="#3b82f6" />
-        </linearGradient>
-        <linearGradient id="iconGradB" x1="1" y1="1" x2="0" y2="0">
-          <stop offset="0%"  stopColor="#3b82f6" />
           <stop offset="100%" stopColor="#1d4ed8" />
         </linearGradient>
       </defs>
 
-      {/* Top-right arc */}
-      <path d="M24 8 A16 16 0 0 1 40 24" stroke="url(#iconGradA)"
-            strokeWidth="3.5" strokeLinecap="round" fill="none"/>
-      {/* Arrow tip top-right */}
-      <polyline points="37,17 40,24 33,24" stroke="url(#iconGradA)"
-                strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      {/* Top semicircle: left (9,24) clockwise over top to right (39,24) */}
+      <path d="M 9 24 A 15 15 0 0 1 39 24"
+            stroke="url(#iconG)" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      {/* Arrowhead at right end — V tip at (39,24) opening upward, shows downward (CW) flow */}
+      <path d="M 36 19 L 39 24 L 42 19"
+            stroke="url(#iconG)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
 
-      {/* Bottom-left arc */}
-      <path d="M24 40 A16 16 0 0 1 8 24" stroke="url(#iconGradB)"
-            strokeWidth="3.5" strokeLinecap="round" fill="none"/>
-      {/* Arrow tip bottom-left */}
-      <polyline points="11,31 8,24 15,24" stroke="url(#iconGradB)"
-                strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      {/* Bottom semicircle: right (39,24) clockwise under bottom to left (9,24) */}
+      <path d="M 39 24 A 15 15 0 0 1 9 24"
+            stroke="url(#iconG)" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      {/* Arrowhead at left end — V tip at (9,24) opening downward, shows upward (CW) flow */}
+      <path d="M 12 29 L 9 24 L 6 29"
+            stroke="url(#iconG)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
 
-      {/* Leaf accent — top */}
-      <path d="M21 7 Q24 3 27 7 Q24 10 21 7Z" fill="#93c5fd" opacity="0.85"/>
-      {/* Leaf stem */}
-      <line x1="24" y1="10" x2="24" y2="7" stroke="#93c5fd" strokeWidth="1.5"
-            strokeLinecap="round" opacity="0.7"/>
+      {/* Leaf accent at top peak of arc */}
+      <path d="M 21.5 8 Q 24 4 26.5 8 Q 24 11 21.5 8 Z" fill="#93c5fd" />
     </svg>
   )
 }
