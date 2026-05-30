@@ -47,10 +47,26 @@ export default function AdminLogin() {
           <div className="flex flex-col items-center mb-8">
             <div className="w-14 h-14 rounded-xl bg-eco-800 border border-eco-600
                             flex items-center justify-center mb-4 shadow-eco-sm">
-              <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8">
-                <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z"
-                      stroke="#22c55e" strokeWidth="1.5" fill="none"/>
-                <circle cx="20" cy="20" r="4" stroke="#4ade80" strokeWidth="1.5" fill="none"/>
+              <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
+                <defs>
+                  <linearGradient id="adminGradA" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#93c5fd" />
+                    <stop offset="100%" stopColor="#3b82f6" />
+                  </linearGradient>
+                  <linearGradient id="adminGradB" x1="1" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stopColor="#3b82f6" />
+                    <stop offset="100%" stopColor="#1d4ed8" />
+                  </linearGradient>
+                </defs>
+                <path d="M24 8 A16 16 0 0 1 40 24" stroke="url(#adminGradA)"
+                      strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+                <polyline points="37,17 40,24 33,24" stroke="url(#adminGradA)"
+                          strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <path d="M24 40 A16 16 0 0 1 8 24" stroke="url(#adminGradB)"
+                      strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+                <polyline points="11,31 8,24 15,24" stroke="url(#adminGradB)"
+                          strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <path d="M21 7 Q24 3 27 7 Q24 10 21 7Z" fill="#93c5fd" opacity="0.85"/>
               </svg>
             </div>
             <h1 className="font-brand font-semibold text-eco-400 text-xl">eco-swap</h1>
