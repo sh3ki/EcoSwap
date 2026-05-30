@@ -49,24 +49,23 @@ export default function AdminLogin() {
                             flex items-center justify-center mb-4 shadow-eco-sm">
               <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
                 <defs>
-                  <linearGradient id="adminGradA" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#93c5fd" />
-                    <stop offset="100%" stopColor="#3b82f6" />
-                  </linearGradient>
-                  <linearGradient id="adminGradB" x1="1" y1="1" x2="0" y2="0">
-                    <stop offset="0%" stopColor="#3b82f6" />
+                  <linearGradient id="adminG" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%"  stopColor="#93c5fd" />
                     <stop offset="100%" stopColor="#1d4ed8" />
                   </linearGradient>
                 </defs>
-                <path d="M24 8 A16 16 0 0 1 40 24" stroke="url(#adminGradA)"
-                      strokeWidth="3.5" strokeLinecap="round" fill="none"/>
-                <polyline points="37,17 40,24 33,24" stroke="url(#adminGradA)"
-                          strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <path d="M24 40 A16 16 0 0 1 8 24" stroke="url(#adminGradB)"
-                      strokeWidth="3.5" strokeLinecap="round" fill="none"/>
-                <polyline points="11,31 8,24 15,24" stroke="url(#adminGradB)"
-                          strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <path d="M21 7 Q24 3 27 7 Q24 10 21 7Z" fill="#93c5fd" opacity="0.85"/>
+                {/* Top semicircle */}
+                <path d="M 9 24 A 15 15 0 0 1 39 24"
+                      stroke="url(#adminG)" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+                <path d="M 36 19 L 39 24 L 42 19"
+                      stroke="url(#adminG)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                {/* Bottom semicircle */}
+                <path d="M 39 24 A 15 15 0 0 1 9 24"
+                      stroke="url(#adminG)" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+                <path d="M 12 29 L 9 24 L 6 29"
+                      stroke="url(#adminG)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                {/* Leaf */}
+                <path d="M 21.5 8 Q 24 4 26.5 8 Q 24 11 21.5 8 Z" fill="#93c5fd"/>
               </svg>
             </div>
             <h1 className="font-brand font-semibold text-eco-400 text-xl">eco-swap</h1>
