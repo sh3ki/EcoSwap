@@ -35,7 +35,7 @@ export default function SummaryScreen() {
           <h2 className="font-brand font-bold text-5xl text-eco-400 eco-glow-text">
             Thank you!
           </h2>
-          <p className="text-eco-600 mt-2 text-sm">
+          <p className="ttext-eco-200 mt-2 text-sm">
             You've helped make the planet a little greener today.
           </p>
         </div>
@@ -43,11 +43,11 @@ export default function SummaryScreen() {
         {/* Coin payout — hero */}
         <div className="eco-card eco-card-glow rounded-2xl px-8 py-8 flex flex-col items-center
                         border border-eco-500 shadow-eco-lg slide-up">
-          <p className="text-eco-600 text-xs uppercase tracking-widest mb-1">Total Earned</p>
+          <p className="ttext-eco-200 text-xs uppercase tracking-widest mb-1">Total Earned</p>
           <div className="font-brand font-bold text-8xl text-eco-400 eco-glow-text counter-num">
             ₱{coins}
           </div>
-          <p className="text-eco-600 text-sm mt-2">{coins} Philippine peso coin{coins !== 1 ? 's' : ''}</p>
+          <p className="ttext-eco-200 text-sm mt-2">{coins} Philippine peso coin{coins !== 1 ? 's' : ''}</p>
         </div>
 
         {/* Breakdown */}
@@ -70,7 +70,7 @@ export default function SummaryScreen() {
             <p className="text-eco-700 text-xs uppercase tracking-widest mb-1">
               Leftover (not rewarded this session)
             </p>
-            <p className="text-eco-600 text-sm">
+            <p className="ttext-eco-200 text-sm">
               {leftoverB > 0 && `${leftoverB} bottle${leftoverB !== 1 ? 's' : ''}`}
               {leftoverB > 0 && leftoverC > 0 && ', '}
               {leftoverC > 0 && `${leftoverC} can${leftoverC !== 1 ? 's' : ''}`}
@@ -100,7 +100,7 @@ export default function SummaryScreen() {
 function BreakdownRow({ label, value, unit, color, bold }) {
   return (
     <div className="flex items-center justify-between">
-      <span className={`text-sm ${bold ? 'font-semibold text-eco-300' : 'text-eco-600'}`}>
+      <span className={`text-sm ${bold ? 'font-semibold text-eco-300' : 'ttext-eco-200'}`}>
         {label}
       </span>
       <span className={`font-mono text-sm counter-num ${color} ${bold ? 'font-bold' : ''}`}>
