@@ -3,6 +3,7 @@ import { AppProvider } from './contexts/AppContext'
 import MainPage        from './pages/MainPage'
 import AdminLogin      from './pages/AdminLogin'
 import AdminDashboard  from './pages/AdminDashboard'
+import DemoFlowPage    from './pages/DemoFlowPage'
 
 function ProtectedAdmin({ children }) {
   const token = localStorage.getItem('eco_admin_token')
@@ -21,6 +22,9 @@ export default function App() {
           </AppProvider>
         }
       />
+
+      {/* Demo-only flow */}
+      <Route path="/demo" element={<DemoFlowPage />} />
 
       {/* Admin */}
       <Route path="/admin"           element={<AdminLogin />} />
